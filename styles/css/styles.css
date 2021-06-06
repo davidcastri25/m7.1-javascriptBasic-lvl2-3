@@ -1,0 +1,43 @@
+body {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(248, 247, 184);
+}
+
+.calculadora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  background-color: #294183;
+  width: 300px;
+  height: 500px;
+  border-radius: 25px;
+}
+
+.calculadora td button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+#display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 5px;
+  font-size: 40px;
+  margin-bottom: 40px;
+  width: 270px;
+  height: 120px;
+  line-height: 100px;
+  background-color: rgb(173, 206, 170);
+  border-radius: 15px;
+  font-family: "Manrope", sans-serif;
+  /* overflow-y: scroll; */
+}
