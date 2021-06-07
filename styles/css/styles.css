@@ -37,10 +37,10 @@ body {
 #display {
   text-align: end;
   padding: 0 5px;
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 10px;
   width: 260px;
-  height: 120px;
+  height: 100px;
   line-height: 100px;
   background-color: rgb(173, 206, 170);
   border-radius: 15px;

@@ -31,31 +31,42 @@ function apretarNumero(num) {
 function operador(operador) {
     let resultadoTemporal;
 
-    operacion = operador;
-    operacionMarcada = true; //Indicamos que hemos marcado una operación
+    if (numero1 == "" && primeraOperacion == true){ //Si el primer número es negativo
+        numero1 = "-";
+    }
+    else {
+        
+        operacionMarcada = true; //Indicamos que hemos marcado una operación
 
-    if (primeraOperacion == false) { //Si no es la primera vez que marcamos, queremos que en la pantalla ya salga la operación anterior calculada
-        resultadoTemporal = calculadora(operacionAnterior, numero1, numero2);
-        numero1 = resultadoTemporal;
-
-        if (numero1 == "No se puede dividir entre 0, reseteando..."){
-            alert(numero1);
-            
+        if (primeraOperacion == false && numero2 == "" && operador == "-"){
+            numero2 = "-"; //Para que podamos marcar que un número es negativo
         }
         else {
-            display.value = numero1;
-        }
-        
-        numero2 = "";
-    }
-    
-    operacionAnterior = operacion; //La operación que nos calcula cuando le damos por segunda vez, es la de la primera
+            operacion = operador;
+            if (primeraOperacion == false) { //Si no es la primera vez que marcamos,    queremos que en la pantalla ya salga la operación anterior calculada
+            resultadoTemporal = calculadora(operacionAnterior, numero1, numero2);
+            numero1 = resultadoTemporal;
 
-    primeraOperacion = false;
-    //Si hemos dividido entre 0, reseteamos todo
-    if (numero1 == "No se puede dividir entre 0, reseteando...") {
-        limpiar();
-    }
+            if (numero1 == "No se puede dividir entre 0, reseteando..."){
+                alert(numero1);
+            
+            }
+            else {
+                display.value = numero1;
+            }
+        
+            numero2 = "";
+            }
+    
+            operacionAnterior = operacion; //La operación que nos calcula cuando le damos por segunda vez, es la de la primera
+
+            primeraOperacion = false;
+            //Si hemos dividido entre 0, reseteamos todo
+            if (numero1 == "No se puede dividir entre 0, reseteando...") {
+            limpiar();
+            }
+        }        
+    }    
 }
 
 
