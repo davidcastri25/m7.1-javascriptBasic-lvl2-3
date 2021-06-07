@@ -20,65 +20,68 @@
     <table class="calculadora">
         <tr>
             <td colspan="4">
-                <span id="display">
-                    
-                </span>
+                <input name="display" type="text" class="color_display" id="display">
             </td>
         </tr>
         <tr>
             <td>
-                <button id="siete">7</button>
+                <button id="siete" onclick="apretarNumero('7')">7</button>
             </td>
             <td>
-                <button id="ocho">8</button>
+                <button id="ocho" onclick="apretarNumero('8')">8</button>
             </td>
             <td>
-                <button id="nueve">9</button>
+                <button id="nueve" onclick="apretarNumero('9')">9</button>
             </td>
             <td>
-                <button id="division">/</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button id="cuatro">4</button>
-            </td>
-            <td>
-                <button id="cinco">5</button>
-            </td>
-            <td>
-                <button id="seis">6</button>
-            </td>
-            <td>
-                <button id="multiplicacion">*</button>
+                <button id="division" onclick="operador('/')">/</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button id="uno">1</button>
+                <button id="cuatro" onclick="apretarNumero('4')">4</button>
             </td>
             <td>
-                <button id="dos">2</button>
+                <button id="cinco" onclick="apretarNumero('5')">5</button>
             </td>
             <td>
-                <button id="tres">3</button>
+                <button id="seis" onclick="apretarNumero('6')">6</button>
             </td>
             <td>
-                <button id="resta">-</button>
+                <button id="multiplicacion" onclick="operador('*')">*</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button id="igual">=</button>
+                <button id="uno" onclick="apretarNumero('1')">1</button>
             </td>
             <td>
-                <button id="clear">C</button>
+                <button id="dos" onclick="apretarNumero('2')">2</button>
             </td>
             <td>
-                <button id="cero">0</button>
+                <button id="tres" onclick="apretarNumero('3')">3</button>
             </td>
             <td>
-                <button id="suma">+</button>
+                <button id="resta" onclick="operador('-')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="clear" onclick="limpiar()">C</button>
+            </td>
+            <td>
+                <button id="cero" onclick="apretarNumero('0')">0</button>
+            </td>
+            <td>
+                <button id="coma" onclick="apretarNumero('.')">.</button>
+            </td>
+            <td>
+                <button id="suma" onclick="operador('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button id="igual" onclick="igual()">=</button>
             </td>
         </tr>
     </table>
